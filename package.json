@@ -5,12 +5,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "test": "ng test",
+    "deploy": "gh-pages -d dist/EkoNPMPackage",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:lib": "ng-packagr -p ./projects/eko-rating-input/ng-package.json"
   },
   "private": true,
+  "hompage": "https://ValonHajredini.github.io/eko-rating-input",
   "dependencies": {
     "@angular/animations": "~7.2.0",
     "@angular/common": "~7.2.0",
