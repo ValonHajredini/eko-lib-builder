@@ -27,6 +27,7 @@
     "eko-checkbox": "^1.0.3",
     "eko-rating-input": "^1.0.1",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^2.0.1",
     "jquery": "^3.3.1",
     "popper": "^1.0.1",
     "rxjs": "~6.3.3",
