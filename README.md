@@ -1,27 +1,84 @@
-# EkoNPMPackage
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
+<a href="#">
+    <h1 align="center">EkoRatingInput</h1>
+</a>
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Getting Started
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+EkoRatingInput contains the rating input in stars design, to work is required to have Fontawsome library. 
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Installation instructions
+##### Method 1
+Install `eko-checkbox` from `npm`:
+```bash
+npm install eko-checkbox --save
+```
+
+Add needed package to NgModule imports:
+```js
+import { EkoCheckboxModule } from 'eko-checkbox';
+
+@NgModule({
+  ...
+  imports: [
+  ...,
+  EkoCheckboxModule,
+  ...
+  ]
+  ...
+})
+```
+To app.component.ts create the func tion to get data from eko-checkbox checkbox
+```js
+export class AppComponent {
+...
+checkboxData(e) {
+    console.log(e);
+  }
+...
+}
+```
+To  app.component.html add :
+```html
+<eko-checkbox
+  [fontSize]="'22px'"
+  [color]="'#fff'"
+  [value]="true"
+  [name]="'myCheckbox'"
+  (data)="checkboxData($event)"
+>Check box</eko-checkbox>
+```
+if you provide the name `[name]="'anyName'"` the return data will be: 
+```js
+{name: 'anyName', value: true} 
+```
+or
+```js
+{name: 'anyName', value: false} 
+```
+if you do not provide a name like: 
+```html
+<eko-checkbox
+  [fontSize]="'22px'"
+  [color]="'#fff'"
+  [value]="true"
+  (data)="checkboxData($event)"
+>Check box</eko-checkbox>
+```
+the return value will be: 
+```js
+true 
+```
+or
+```js
+false
+```

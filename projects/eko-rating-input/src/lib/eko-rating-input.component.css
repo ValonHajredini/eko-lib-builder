@@ -1,0 +1,20 @@
+span.star i.fa-star-o {
+  cursor: pointer;
+  /*color: #999 !important;*/
+}
+
+span.star i.fa-star.gold {
+  color: #ffe835 !important;
+}
+span.star i.fa-star.copper {
+  color:#b87333 !important;
+}
+span.star i.fa-star.silver {
+  color:#c6c6c6 !important;
+}
+span.star {
+  padding: 2px;
+}
+.set-left-padding{
+  padding-left: 4px;
+}
